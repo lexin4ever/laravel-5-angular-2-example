@@ -8,7 +8,7 @@
     "typescript-extends": "^1.0.1",
     "typescript-param": "^1.0.0",
     "typescript-metadata": "^1.0.0",
-    "typings": "^1.0.4"
+    "typings":"^0.8.1"
   },
   "scripts": {
     "install": "cd resources/assets/typescript && typings install"
