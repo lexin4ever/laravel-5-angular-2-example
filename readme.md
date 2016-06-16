@@ -1,5 +1,7 @@
 Laravel 5 and Angular 2 example project
 
+https://github.com/sanex3339/laravel-5-angular-2-example
+
 ## Installation:
 
 ```

@@ -1,0 +1,64 @@
+.scores{
+  padding: 15px 25px;
+  .count {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    border-radius: 15px;
+    display: inline-block;
+    padding: 0 10px 0 20px;
+    margin-left: 10px;
+  }
+  .star {
+    background: url(../img/star.png) no-repeat;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    margin-top: -(32px - 25px ) / 2;
+  }
+}
+.actions{
+  padding: 10px 15px 10px 25px;
+  overflow-x: auto;
+  
+  .action{
+    float: left;
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    color: white;
+
+    &:not(.disabled) {
+      cursor: pointer;
+
+      .action-timer {
+        display: none;
+      }
+    }
+    &.disabled{
+      .action-image {
+        opacity: 0.3;
+      }
+    }
+    .action-timer{
+      margin-top: -40px;
+      font-weight: 700;
+      display: block;
+    }
+    .action-image {
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+    }
+    .action-145{
+      background: url(../img/1.png) 50% no-repeat;
+    }
+    .action-146{
+      background: url(../img/2.png) 50% no-repeat;
+    }
+    .action-147{
+      background: url(../img/3.png) 50% no-repeat;
+    }
+  }
+}

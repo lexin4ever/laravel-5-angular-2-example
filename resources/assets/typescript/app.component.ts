@@ -9,7 +9,7 @@ import { SecondComponent } from './Components/SecondComponent/SecondComponent';
         component: FirstComponent
     },
     {
-        path: '/edit',
+        path: '/second',
         component: SecondComponent
     }
 ])

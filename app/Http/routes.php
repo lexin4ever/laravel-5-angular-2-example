@@ -17,8 +17,8 @@ Route::get('/', [
     'as' => 'home'
 ]);
 
-// Angular 2 base `/edit` route resolving
-Route::get('/edit', 'ExampleControllers\AngularRoutesController@index');
+// Angular 2 base `/second` route resolving
+Route::get('/second', 'ExampleControllers\AngularRoutesController@index');
 
 // Angular 2 templates route
 Route::get('/templates/{template}', 'ExampleControllers\AngularTemplatesController@index');

@@ -5,6 +5,7 @@
 /public/fonts
 /public/uploads
 /public/upload-images
+/resources/assets/typescript/typings
 Homestead.yaml
 Homestead.json
 .env
