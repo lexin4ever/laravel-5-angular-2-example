@@ -1,6 +1,7 @@
 <div class="scores">
     <div class="star"></div>
-    <div class="count" [innerHTML]="score + {{$current_points}}">{{$current_points}}</div>
+    <div class="star" @starAnimation="score"></div>
+    <score class="count" [score]="score">{{$current_points}}</score>
 </div>
 <div class="actions">
     @foreach ($actions as $action)
