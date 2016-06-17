@@ -14,7 +14,7 @@
              [id]="{{$action['id']}}"
         ><div>
             <div class="action-image action-{{ $action['id'] }}"></div>
-            <timer class="action-timer">{{ date('i:s', $action['rest_time']) }}</timer>@{{timer}}
+            <timer class="action-timer">{{ date('i:s', $action['rest_time']) }}</timer>
         </div>
         </action>
     @endforeach
