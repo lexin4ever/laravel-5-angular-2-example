@@ -11,6 +11,7 @@
              [restTime]="{{$action['rest_time']}}"
              [recoveryTime]="{{$action['recovery_time']}}"
              [points]="{{$action['points']}}"
+             [id]="{{$action['id']}}"
         ><div>
             <div class="action-image action-{{ $action['id'] }}"></div>
             <timer class="action-timer">{{ date('i:s', $action['rest_time']) }}</timer>@{{timer}}

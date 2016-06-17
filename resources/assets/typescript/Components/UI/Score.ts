@@ -17,7 +17,7 @@ export class Score implements OnChanges {
     }
 
     ngOnChanges(changes: {[ propName: string]: SimpleChange}) {
-        console.log('Change detected:', changes['score'].currentValue);
+        // console.log('Change detected:', changes['score'].currentValue);
         this.softUpdate()
     }
 

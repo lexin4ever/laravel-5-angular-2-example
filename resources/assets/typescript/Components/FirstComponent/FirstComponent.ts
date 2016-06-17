@@ -1,4 +1,4 @@
-import { Component, Inject, Injectable,
+import { Component,
     animate,
     trigger,
     state,

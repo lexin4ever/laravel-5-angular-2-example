@@ -24,7 +24,7 @@ Route::get('/second', 'ExampleControllers\AngularRoutesController@index');
 Route::get('/templates/{template}', 'ExampleControllers\AngularTemplatesController@index');
 
 // API route
-Route::post('/api/upload-file', 'ExampleControllers\UploadController@uploadFile');
+Route::get('/api/action/{id}', 'ExampleControllers\AngularAPIController@index')->where('id', '[0-9]+');;
 
 /*
 |--------------------------------------------------------------------------
