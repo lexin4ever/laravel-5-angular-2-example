@@ -1,12 +1,12 @@
 import { Component, ElementRef, HostListener, ContentChild, Output, Input, Inject, EventEmitter} from '@angular/core';
 import { Timer } from '../Timer';
-import { ScoreService } from '../../../Services/ScoreService';
+import { ActionService } from '../../../Services/ActionService';
 import * as responses from '../../../Services/Responses';
 
 @Component({
     selector: 'action',
     template: "<ng-content></ng-content>",
-    providers: [ScoreService]
+    providers: [ActionService]
 })
 export class Action {
 
@@ -17,13 +17,13 @@ export class Action {
     @Output() score = new EventEmitter();
     @ContentChild(Timer) timer:Timer;
 
-    private scoreService: ScoreService;
+    private actionService: ActionService;
 
     private disabled: boolean = false;
 
     constructor(private el: ElementRef,
-                @Inject(ScoreService) scoreService: ScoreService) {
-        this.scoreService = scoreService;
+                @Inject(ActionService) actionService: ActionService) {
+        this.actionService = actionService;
     }
 
     ngAfterViewInit() {
@@ -62,8 +62,8 @@ export class Action {
     private saveAndAddScore(): Promise<any> {
         var self = this;
         return new Promise((resolve, reject) => {
-            self.scoreService
-                .add(self.id)
+            self.actionService
+                .doAction(self.id)
                 .subscribe(
                     (answer: responses.APIResponse) => {
                         if (answer instanceof responses.OkResponse) {

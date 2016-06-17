@@ -4,12 +4,12 @@ import { Observable }     from 'rxjs/Observable';
 import * as responses   from './Responses';
 
 @Injectable()
-export class ScoreService {
+export class ActionService {
     private actionUrl = "/api/action/";
 
     constructor (private http: Http) {}
 
-    public add(id: number): Observable<responses.APIResponse> {
+    public doAction(id: number): Observable<responses.APIResponse> {
         return this.http.get(this.actionUrl + id)
             .map(this.extractData)
             .catch(this.handleError);
